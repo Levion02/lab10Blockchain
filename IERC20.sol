@@ -19,12 +19,12 @@ interface IERC20 {
 contract ERC20Basic is IERC20 {
 
     string public constant name = "LevTokens";
-    string public constant symbol = "ERC";
-    uint8 public constant decimals = 18;
+    string public constant symbol = "LEV";
+    uint8 public constant decimals = 2;
 
     mapping(address => uint256) balances;
     mapping(address => mapping (address => uint256)) allowed;
-    uint256 totalSupply_ = 10 ether;
+    uint256 totalSupply_ = 1000*(10**decimals);
     
    constructor() {
     balances[msg.sender] = totalSupply_;
